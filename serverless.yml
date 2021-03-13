@@ -20,13 +20,6 @@ functions:
           cors:
             origins:
               - '*'
-            headers:
-              - Content-Type
-              - Authorization
-              - X-Requested-With
-              - Cache-Control
-              - If-Modified-Since
-              - Pragma
           response:
             statusCode:
               200:
