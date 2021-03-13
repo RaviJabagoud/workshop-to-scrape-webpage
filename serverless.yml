@@ -1,0 +1,35 @@
+service: scrape-url
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: qa
+  memorySize: 512
+  versionFunctions: false
+  
+functions:
+  
+  scrapePage:
+    handler: scrape/controller.scrapePage
+    timeout: 30
+    events:
+      - http:
+          path: scrapePage
+          method: post
+          integration: lambda
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - Authorization
+              - X-Requested-With
+              - Cache-Control
+              - If-Modified-Since
+              - Pragma
+          response:
+            statusCode:
+              200:
+                headers:
+                  Access-Control-Allow-Origin: "*"
+                  Access-Control-Allow-Credentials: true

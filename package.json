@@ -1,0 +1,33 @@
+{
+  "name": "robosource-services",
+  "version": "1.0.0",
+  "description": "scrape url",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive"
+  },
+  "author": "Ravi",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "chai": "^3.5.0",
+    "freshy": "^1.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^2.4.5",
+    "serverless-offline": "^3.33.0",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.6.7",
+    "request": "^2.78.0",
+    "lambda-leak": "^1.0.0",
+    "lambda-tester": "^2.6.0",
+    "cheerio": "^1.0.0-rc.5",
+    "node-html-parser": "^3.0.4",
+    "mysql": "^2.11.1",
+    "query-string": "^4.2.3"
+  }
+}
